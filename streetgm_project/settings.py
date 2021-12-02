@@ -17,6 +17,8 @@ import cloudinary.uploader
 import django_heroku
 from decouple import config, Csv
 
+# import authentication
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -33,6 +35,7 @@ DEBUG = config('DEBUG', default=False)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
+AUTH_USER_MODEL = "authentication.User"
 
 
 # Application definition
